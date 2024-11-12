@@ -10,3 +10,6 @@ class Solution:
             else:
                 return True
         return False
+
+
+# TOPIC: array, hashtable, sorting

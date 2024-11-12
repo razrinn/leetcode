@@ -15,3 +15,6 @@ class Solution:
             if k not in dic_a or dic_a[k] != v:
                 return False
         return True
+
+
+# TOPIC: hashtable, string, sorting

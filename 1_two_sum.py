@@ -11,3 +11,6 @@ class Solution:
             else:
                 return [dic[num], i]
         return []
+
+
+# TOPICS: array, hashtable

@@ -25,4 +25,4 @@ class Solution:
 # TOPICS: array, hashtable, divideandconquer, sorting, heap, bucketsort, counting, quickselect
 # DIFFICULTY: medium
 # NOTES: solution with heap, must try again with bucketsort
-# TODO: NOT SOLVED. TRY THIS QUESTION AGAIN LATER BECAUSE RUNNING OUT OF TIME
+# TODO: NOT SOLVED. TRY THIS PROBLEMS AGAIN LATER BECAUSE RUNNING OUT OF TIME

@@ -13,3 +13,4 @@ class Solution:
 
 
 # TOPIC: array, hashtable, sorting
+# DIFFICULTY: easy

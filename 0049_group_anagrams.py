@@ -18,4 +18,5 @@ class Solution:
 
 
 # TOPICS: array, hashtable, string, sorting
+# DIFFICULTY: medium
 # NOTES: is it acceptable to sort the string or should I handle the anagram check manually?

@@ -14,3 +14,4 @@ class Solution:
 
 
 # TOPICS: array, hashtable
+# DIFFICULTY: easy

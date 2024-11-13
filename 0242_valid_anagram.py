@@ -18,3 +18,4 @@ class Solution:
 
 
 # TOPIC: hashtable, string, sorting
+# DIFFICULTY: easy

@@ -17,5 +17,5 @@ class Solution:
         return True
 
 
-# TOPIC: hashtable, string, sorting
+# TOPICS: hashtable, string, sorting
 # DIFFICULTY: easy

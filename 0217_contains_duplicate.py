@@ -12,5 +12,5 @@ class Solution:
         return False
 
 
-# TOPIC: array, hashtable, sorting
+# TOPICS: array, hashtable, sorting
 # DIFFICULTY: easy

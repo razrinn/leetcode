@@ -1,5 +1,34 @@
 from typing import List
 
+# watch solution, need revisit
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        nums.sort()
+        length = len(nums)
+        res = []
+
+        for i in range(length):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+
+            l, r = i +1, length - 1
+            while l < r:
+                a, b, c = nums[l], nums[r], nums[i]
+                if a + b + c == 0:
+                    res.append([a, b, c])
+                    l += 1
+                    while nums[l] == nums[l-1] and l < r:
+                        l+= 1
+
+                elif a + b + c < 0:
+                    l += 1
+
+                else:
+                    r -= 1
+        return res
+
+
+
 # Brute force, time limit exception
 class Solution1:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
@@ -33,3 +62,4 @@ class Solution1:
                 c = b + 1
 
         return res
+

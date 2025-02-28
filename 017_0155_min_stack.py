@@ -1,3 +1,4 @@
+# look at hint, need to revisit
 class MinStack:
 
     def __init__(self):

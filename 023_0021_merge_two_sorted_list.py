@@ -24,14 +24,6 @@ class Solution:
                 n2 = n2.next
             curr = curr.next
 
-        while n1:
-            curr.next = n1
-            n1 = n1.next
-            curr = curr.next
-
-        while n2:
-            curr.next = n2
-            n2 = n2.next
-            curr=curr.next
+        curr.next = n1 or n2
 
         return root

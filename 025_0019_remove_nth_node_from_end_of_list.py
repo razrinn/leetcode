@@ -19,3 +19,17 @@ class Solution:
         else:
             lag.next = lag.next.next if lag.next else None
         return head
+
+    # slightly different solution. use dummy node
+    def removeNthFromEnd2(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
+        dummy = ListNode(0, head)
+        lead, lag = dummy, dummy
+        for _ in range(n + 1):
+            lead = lead.next
+
+        while lead:
+            lead = lead.next
+            lag = lag.next
+
+        lag.next = lag.next.next if lag.next else None
+        return dummy.next

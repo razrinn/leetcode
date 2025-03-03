@@ -32,3 +32,21 @@ class Solution:
             r += 1
 
         return res
+
+    # second run
+    def lengthOfLongestSubstring2(self, s: str) -> int:
+        if len(s) <= 1:
+            return len(s)
+
+        l, r = 0, 0
+        visited = {}
+        res = 0
+
+        while r < len(s):
+            if s[r] in visited and visited[s[r]] >= l:
+                res = max(res, r - l)
+                l = visited[s[r]] + 1
+            visited[s[r]] = r
+            r += 1
+
+        return max(res, r - l)

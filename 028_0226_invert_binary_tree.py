@@ -18,3 +18,19 @@ class Solution:
         node.left, node.right = right_inverted, left_inverted
 
         return node
+
+    # second run, use fn inside
+    def invertTree2(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        cur = root
+
+        def swap(node):
+            if node == None:
+                return
+
+            node.left, node.right = node.right, node.left
+
+            swap(node.left)
+            swap(node.right)
+
+        swap(cur)
+        return root

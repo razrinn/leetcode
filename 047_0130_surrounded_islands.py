@@ -42,3 +42,37 @@ class Solution:
             for col in range(n):
                 if (row, col) not in non_islands:
                     board[row][col] = "X"
+
+    # second run, more efficient, no redundant code
+    def solve2(self, board: List[List[str]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        edge = set()
+        m, n = len(board), len(board[0])
+
+        def dfs(x, y):
+            if x < 0 or y < 0 or x >= m or y >= n or board[x][y] == "X" or (x, y) in edge:
+                return
+
+            edge.add((x, y))
+
+            dfs(x + 1, y)
+            dfs(x - 1, y)
+            dfs(x, y + 1)
+            dfs(x, y - 1)
+
+
+
+        for row in range(m):
+            dfs(row, 0)
+            dfs(row, n - 1)
+
+        for col in range(n):
+            dfs(0, col)
+            dfs(m - 1, col)
+
+        for row in range(m):
+            for col in range(n):
+                if (row, col) not in edge:
+                    board[row][col] = "X"
